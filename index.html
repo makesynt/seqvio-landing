@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seqvio - Whiteboard explainer videos from React/TSX</title>
+    <meta
+      name="description"
+      content="Seqvio is an open-source toolkit for creating narrated whiteboard-style explainer videos with React/TSX, local rendering, and agent-friendly storyboard workflows."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Seqvio home">
+        <span class="brand-mark">S</span>
+        <span>Seqvio</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#workflow">Workflow</a>
+        <a href="#styles">Styles</a>
+        <a href="#try">Try it</a>
+        <a class="nav-github" href="https://github.com/makesynt/seqvio">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <video
+          class="hero-video"
+          src="assets/videos/seqvio-overview-en.mp4"
+          poster="assets/videos/seqvio-overview-en.preview.gif"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Open-source explainer video toolkit</p>
+          <h1 id="hero-title">Seqvio</h1>
+          <p class="hero-subtitle">Whiteboard explainer videos from React/TSX.</p>
+          <p class="hero-copy">
+            Create narrated whiteboard-style explainers with scenes, narration metadata,
+            captions, QA snapshots, and local MP4 rendering in one source-controlled workflow.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="https://github.com/makesynt/seqvio">View on GitHub</a>
+            <a class="button secondary" href="#demo">Watch demo</a>
+          </div>
+          <p class="hero-proof">
+            Built for lessons, product walkthroughs, technical diagrams, and agent-generated explainers.
+          </p>
+        </div>
+      </section>
+
+      <section class="workflow section" id="workflow" aria-labelledby="workflow-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Workflow</p>
+            <h2 id="workflow-title">From structured scenes to rendered MP4</h2>
+            <p>
+              Keep the moving parts of an explainer video close to the source: layout,
+              timing, narration, captions, and render settings.
+            </p>
+          </div>
+          <ol class="pipeline" aria-label="Seqvio render pipeline">
+            <li>TSX composition</li>
+            <li>Narration manifest</li>
+            <li>TTS</li>
+            <li>QA snapshots</li>
+            <li>MP4</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section why" aria-labelledby="why-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="eyebrow">Why Seqvio</p>
+            <h2 id="why-title">A narrower layer above React can render video</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <span class="feature-icon ink">01</span>
+              <h3>Whiteboard primitives</h3>
+              <p>
+                Draw text, rough shapes, images, icons, and hand-timed visual steps without
+                starting from a blank video canvas.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon blue">02</span>
+              <h3>Narration-first workflow</h3>
+              <p>
+                Extract narration metadata, synthesize voiceover, align captions, and keep
+                scene timing version-controlled.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon green">03</span>
+              <h3>Agent-friendly structure</h3>
+              <p>
+                Validate storyboard IR, compile scene plans into TSX, and give agents reusable
+                blocks and frame specs.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section demo" id="demo" aria-labelledby="demo-title">
+        <div class="section-inner demo-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Demo</p>
+            <h2 id="demo-title">A real Seqvio render</h2>
+            <p>
+              This overview was authored as a TSX composition, paired with narration metadata,
+              and rendered locally.
+            </p>
+          </div>
+          <div class="demo-frame">
+            <video
+              src="assets/videos/seqvio-overview-en.mp4"
+              poster="assets/videos/seqvio-overview-en.preview.gif"
+              controls
+              playsinline
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="section styles" id="styles" aria-labelledby="styles-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Styles</p>
+            <h2 id="styles-title">Explainer styles included today</h2>
+          </div>
+          <div class="style-grid">
+            <article class="style-card">
+              <img
+                src="assets/videos/seqvio-overview-en.preview.gif"
+                alt="Whiteboard explainer animation preview"
+              />
+              <h3>Whiteboard explainers</h3>
+              <p>For lessons, technical concepts, and step-by-step explanations.</p>
+            </article>
+            <article class="style-card sticky-preview">
+              <div class="sticky-board" aria-hidden="true">
+                <span>Plan</span>
+                <span>Sketch</span>
+                <span>Render</span>
+              </div>
+              <h3>Sticky-note scenes</h3>
+              <p>Workshop-style layouts with notes, pins, tape, and rough organization.</p>
+            </article>
+            <article class="style-card product-preview">
+              <div class="browser-shot" aria-hidden="true">
+                <div class="browser-bar"><span></span><span></span><span></span></div>
+                <div class="browser-body">
+                  <strong>Product demo scene</strong>
+                  <small>Browser frame, cursor path, and callouts.</small>
+                </div>
+              </div>
+              <h3>Product walkthroughs</h3>
+              <p>Browser frames, screenshot placeholders, cursor paths, titles, and callouts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section local-rendering" aria-labelledby="render-title">
+        <div class="section-inner render-layout">
+          <div>
+            <p class="eyebrow">Local rendering</p>
+            <h2 id="render-title">Render locally. Inspect before the final MP4.</h2>
+            <p>
+              Seqvio uses Puppeteer and FFmpeg under the hood. Generate key-frame QA snapshots
+              before spending time on a full render.
+            </p>
+          </div>
+          <pre class="code-block"><code>seqvio-render \
+  --component examples/compositions/seqvio-overview-en.tsx \
+  --output output/seqvio-overview-en.mp4 \
+  --preset final</code></pre>
+        </div>
+      </section>
+
+      <section class="section honesty" aria-labelledby="honesty-title">
+        <div class="section-inner narrow">
+          <p class="eyebrow">Scope</p>
+          <h2 id="honesty-title">Not a general video editor</h2>
+          <p>
+            Seqvio is not trying to replace Remotion, Premiere, or a full timeline editor.
+            It is focused on one narrower job: repeatable narrated explainer videos,
+            especially whiteboard-style educational and product communication videos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section try" id="try" aria-labelledby="try-title">
+        <div class="section-inner try-layout">
+          <div>
+            <p class="eyebrow">Try it</p>
+            <h2 id="try-title">Install the renderer and start from an example</h2>
+            <p>
+              The renderer CLI creates videos. The optional agent skill teaches coding agents
+              how to author and render Seqvio compositions.
+            </p>
+          </div>
+          <div class="install-stack">
+            <pre class="code-block"><code>npm install -g @seqvio/renderer
+seqvio-render --help</code></pre>
+            <pre class="code-block"><code>npx skills add makesynt/seqvio --skill seqvio -a codex -y</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>MIT licensed</span>
+      <a href="https://github.com/makesynt/seqvio">Open source on GitHub</a>
+      <span>Built for code-first explainer video workflows</span>
+    </footer>
+  </body>
+</html>
