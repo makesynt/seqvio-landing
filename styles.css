@@ -107,15 +107,16 @@ h3 {
 
 .hero {
   position: relative;
-  min-height: 600px;
-  height: 80svh;
-  max-height: 780px;
+  min-height: 680px;
+  height: 88svh;
+  max-height: 840px;
   overflow: hidden;
   color: var(--white);
   background: var(--ink);
+  isolation: isolate;
 }
 
-.hero-media,
+.hero-backdrop,
 .hero-shade {
   position: absolute;
   inset: 0;
@@ -123,21 +124,144 @@ h3 {
   height: 100%;
 }
 
-.hero-media {
+.hero-backdrop {
+  overflow: hidden;
+  background: #07111f;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(93, 225, 210, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(93, 225, 210, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, transparent 8%, #000 50%, #000 100%);
+}
+
+.hero-stage {
+  position: absolute;
+  z-index: 1;
+  top: var(--header-height);
+  right: max(-26px, calc((100vw - 1540px) / 2));
+  width: 910px;
+  height: calc(100% - var(--header-height));
+}
+
+.hero-stage::before,
+.hero-stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero-stage::before {
+  z-index: 0;
+  left: 118px;
+  top: 112px;
+  width: 710px;
+  height: 490px;
+  border: 1px solid rgba(93, 225, 210, 0.2);
+  transform: skewY(-4deg);
+}
+
+.hero-stage::after {
+  z-index: 5;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 17, 31, 0.45) 0%, transparent 18%, transparent 88%, rgba(7, 17, 31, 0.25) 100%);
+}
+
+.hero-frame {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgba(203, 220, 235, 0.38);
+  border-radius: 7px;
+  background: var(--white);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.46);
+  transform-origin: center;
+}
+
+.hero-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: 66% center;
+}
+
+.hero-frame > span {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 7px rgba(0, 0, 0, 0.9);
+}
+
+.hero-frame > span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  background: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(93, 225, 210, 0.18);
+}
+
+.hero-frame-prompt {
+  z-index: 1;
+  top: 62px;
+  right: 292px;
+  width: 520px;
+  opacity: 0.83;
+  transform: rotate(-3deg);
+  animation: hero-drift-prompt 9s ease-in-out infinite;
+}
+
+.hero-frame-output {
+  z-index: 3;
+  top: 202px;
+  right: 52px;
+  width: 650px;
+  transform: rotate(0.7deg);
+  animation: hero-drift-output 8s ease-in-out infinite;
+}
+
+.hero-frame-languages {
+  z-index: 2;
+  top: 492px;
+  right: 6px;
+  width: 510px;
+  opacity: 0.9;
+  transform: rotate(2.2deg);
+  animation: hero-drift-languages 10s ease-in-out infinite;
+}
+
+.hero-frame-output > span,
+.hero-frame-languages > span {
+  color: rgba(7, 17, 31, 0.86);
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.92);
 }
 
 .hero-shade {
-  background: linear-gradient(90deg, rgba(7, 17, 31, 0.98) 0%, rgba(7, 17, 31, 0.91) 34%, rgba(7, 17, 31, 0.28) 72%, rgba(7, 17, 31, 0.14) 100%);
+  z-index: 2;
+  background:
+    linear-gradient(90deg, #07111f 0%, rgba(7, 17, 31, 0.98) 31%, rgba(7, 17, 31, 0.73) 48%, rgba(7, 17, 31, 0.12) 73%, rgba(7, 17, 31, 0.1) 100%),
+    linear-gradient(0deg, rgba(7, 17, 31, 0.72) 0%, transparent 35%);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 6;
   width: min(var(--max), calc(100% - 56px));
   margin: 0 auto;
-  padding-top: 148px;
+  padding-top: 140px;
 }
 
 .eyebrow {
@@ -156,7 +280,7 @@ h3 {
 
 .hero h1 {
   margin-top: 18px;
-  font-size: 72px;
+  font-size: 78px;
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -170,7 +294,7 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 610px;
+  max-width: 580px;
   margin-top: 18px;
   color: rgba(255, 255, 255, 0.76);
   font-size: 18px;
@@ -182,6 +306,55 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
+}
+
+.hero-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  width: min(560px, 100%);
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 13px;
+  font-weight: 680;
+}
+
+.hero-capabilities span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.capability-mark {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  background: var(--cyan);
+}
+
+.capability-mark.amber {
+  background: var(--amber);
+}
+
+.capability-mark.green {
+  background: var(--green);
+}
+
+@keyframes hero-drift-prompt {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); }
+  50% { transform: translate3d(-5px, -7px, 0) rotate(-2.6deg); }
+}
+
+@keyframes hero-drift-output {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0.7deg); }
+  50% { transform: translate3d(4px, -8px, 0) rotate(0.3deg); }
+}
+
+@keyframes hero-drift-languages {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(2.2deg); }
+  50% { transform: translate3d(-4px, 6px, 0) rotate(1.8deg); }
 }
 
 .button {
@@ -218,7 +391,7 @@ h3 {
 
 .hero-cue {
   position: absolute;
-  z-index: 2;
+  z-index: 7;
   left: 50%;
   bottom: 22px;
   display: flex;
@@ -491,22 +664,70 @@ h3 {
   color: var(--white);
 }
 
+@media (max-width: 1180px) {
+  .hero-stage {
+    right: -170px;
+    width: 860px;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(90deg, #07111f 0%, rgba(7, 17, 31, 0.99) 45%, rgba(7, 17, 31, 0.88) 57%, rgba(7, 17, 31, 0.22) 80%, rgba(7, 17, 31, 0.1) 100%),
+      linear-gradient(0deg, rgba(7, 17, 31, 0.76) 0%, transparent 40%);
+  }
+
+  .hero-frame-prompt {
+    right: 260px;
+    width: 460px;
+  }
+
+  .hero-frame-output {
+    right: 110px;
+    width: 540px;
+  }
+
+  .hero-frame-languages {
+    right: 0;
+    width: 450px;
+  }
+}
+
 @media (max-width: 900px) {
   .nav-links a:not(.nav-github) {
     display: none;
   }
 
   .hero {
-    min-height: 620px;
-    height: 82svh;
+    min-height: 680px;
+    height: 88svh;
   }
 
-  .hero-media {
-    object-position: 63% center;
+  .hero-stage {
+    right: -170px;
+    width: 720px;
   }
 
   .hero-shade {
-    background: rgba(7, 17, 31, 0.74);
+    background:
+      linear-gradient(90deg, #07111f 0%, rgba(7, 17, 31, 0.99) 56%, rgba(7, 17, 31, 0.64) 72%, rgba(7, 17, 31, 0.14) 100%),
+      linear-gradient(0deg, rgba(7, 17, 31, 0.76) 0%, transparent 40%);
+  }
+
+  .hero-frame-prompt {
+    right: 238px;
+    width: 440px;
+  }
+
+  .hero-frame-output {
+    top: 230px;
+    right: 90px;
+    width: 480px;
+  }
+
+  .hero-frame-languages {
+    top: 500px;
+    right: 0;
+    width: 430px;
   }
 
   .hero h1 {
@@ -569,26 +790,69 @@ h3 {
   }
 
   .hero {
-    min-height: 590px;
-    height: 80svh;
+    min-height: 748px;
+    height: 92svh;
+    max-height: 790px;
   }
 
-  .hero-media {
-    object-position: 61% center;
+  .hero-grid {
+    background-size: 40px 40px;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 46%, #000 100%);
+  }
+
+  .hero-stage {
+    top: 424px;
+    right: -58px;
+    width: 500px;
+    height: 332px;
+  }
+
+  .hero-stage::before {
+    left: 72px;
+    top: 30px;
+    width: 390px;
+    height: 250px;
+  }
+
+  .hero-stage::after {
+    background: linear-gradient(180deg, rgba(7, 17, 31, 0.5) 0%, transparent 32%, rgba(7, 17, 31, 0.18) 100%);
+  }
+
+  .hero-frame-prompt {
+    top: 6px;
+    right: 182px;
+    width: 300px;
+    opacity: 0.72;
+  }
+
+  .hero-frame-output {
+    top: 92px;
+    right: 60px;
+    width: 370px;
+  }
+
+  .hero-frame-languages {
+    display: none;
+  }
+
+  .hero-frame > span {
+    top: 9px;
+    left: 10px;
+    font-size: 9px;
   }
 
   .hero-shade {
-    background: rgba(7, 17, 31, 0.8);
+    background: linear-gradient(180deg, #07111f 0%, #07111f 49%, rgba(7, 17, 31, 0.88) 61%, rgba(7, 17, 31, 0.16) 100%);
   }
 
   .hero-content {
     width: calc(100% - 36px);
-    padding-top: 112px;
+    padding-top: 100px;
   }
 
   .hero h1 {
     margin-top: 14px;
-    font-size: 48px;
+    font-size: 52px;
   }
 
   .hero-subtitle {
@@ -607,6 +871,10 @@ h3 {
 
   .hero-actions .button {
     flex: 1 1 150px;
+  }
+
+  .hero-capabilities {
+    display: none;
   }
 
   .hero-cue {
@@ -677,5 +945,9 @@ h3 {
 
   .button {
     transition: none;
+  }
+
+  .hero-frame {
+    animation: none;
   }
 }

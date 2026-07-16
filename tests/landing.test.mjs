@@ -18,6 +18,9 @@ const css = readFileSync(cssPath, "utf8");
 
 [
   "A visual language for coding agents to explain ideas",
+  "01 · Agent prompt",
+  "02 · Visual explanation",
+  "03 · Choose the visual language",
   "Your agent already understands the idea. Now it can show it.",
   "One explanation. Three visual languages.",
   "See Seqvio explain itself",
@@ -44,6 +47,8 @@ assert.ok(html.includes('property="og:image" content="https://makesynt.github.io
 assert.ok(html.includes('name="twitter:card"'), "Twitter card metadata should be present");
 assert.ok(css.includes("@media"), "styles.css should include responsive rules");
 assert.ok(css.includes("prefers-reduced-motion"), "styles.css should respect reduced motion");
+assert.ok(css.includes("hero-stage"), "styles.css should include the immersive hero stage");
+assert.ok(css.includes("hero-drift-output"), "hero product frames should have restrained motion");
 assert.ok(!/TODO|TBD|lorem/i.test(html + css), "page should not contain placeholder text");
 
 const localAssetReferences = [...html.matchAll(/(?:src|href|poster|content)="([^"]+)"/g)]

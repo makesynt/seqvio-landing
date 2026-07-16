@@ -33,7 +33,23 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-media" src="assets/images/hero-poster.jpg" alt="Seqvio video frame showing scenes, voice, and visuals assembled into an explanation" />
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-stage">
+            <figure class="hero-frame hero-frame-prompt">
+              <span>01 · Agent prompt</span>
+              <img src="assets/images/agent-prompt.jpg" alt="" />
+            </figure>
+            <figure class="hero-frame hero-frame-output">
+              <span>02 · Visual explanation</span>
+              <img src="assets/images/rag-explanation.jpg" alt="" />
+            </figure>
+            <figure class="hero-frame hero-frame-languages">
+              <span>03 · Choose the visual language</span>
+              <img src="assets/images/visual-languages.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow">Open source · Built for coding agents</p>
@@ -43,6 +59,11 @@
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#install">Install Seqvio</a>
             <a class="button secondary" href="#demo">Watch the demo</a>
+          </div>
+          <div class="hero-capabilities" aria-label="Seqvio visual languages">
+            <span><i class="capability-mark blue"></i>Whiteboard</span>
+            <span><i class="capability-mark amber"></i>Sticky notes</span>
+            <span><i class="capability-mark green"></i>Product demos</span>
           </div>
         </div>
         <a class="hero-cue" href="#how-it-works">See the agent workflow <span aria-hidden="true">↓</span></a>
