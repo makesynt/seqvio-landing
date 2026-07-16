@@ -29,3 +29,9 @@ node scripts/export-launch-assets.mjs
 ```bash
 node tests/landing.test.mjs
 ```
+
+## Click analytics
+
+Primary GitHub, npm, install, and demo interactions are tagged with `data-track` and handled by `analytics.js`. Counts are always retained locally under `seqvio_click_counts_v1` so tracking never blocks navigation.
+
+For aggregate launch analytics, set the `seqvio-analytics-endpoint` meta value in `index.html` to an HTTPS endpoint that accepts JSON `POST` requests. Events contain the event name, page path, destination, timestamp, referrer host, and UTM parameters; no persistent visitor identifier is created.

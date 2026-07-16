@@ -6,15 +6,18 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = path.join(root, "index.html");
 const cssPath = path.join(root, "styles.css");
+const analyticsPath = path.join(root, "analytics.js");
 const videoPath = path.join(root, "assets", "videos", "seqvio-product-hunt-en-bgm.mp4");
 
 assert.ok(existsSync(pagePath), "index.html should exist");
 assert.ok(existsSync(cssPath), "styles.css should exist");
+assert.ok(existsSync(analyticsPath), "analytics.js should exist");
 assert.ok(existsSync(videoPath), "the Product Hunt demo MP4 should exist");
 assert.ok(statSync(videoPath).size > 2_000_000, "the Product Hunt demo MP4 should not be empty");
 
 const html = readFileSync(pagePath, "utf8");
 const css = readFileSync(cssPath, "utf8");
+const analytics = readFileSync(analyticsPath, "utf8");
 
 [
   "A visual language for coding agents to explain ideas",
@@ -49,6 +52,11 @@ assert.ok(css.includes("@media"), "styles.css should include responsive rules");
 assert.ok(css.includes("prefers-reduced-motion"), "styles.css should respect reduced motion");
 assert.ok(css.includes("hero-stage"), "styles.css should include the immersive hero stage");
 assert.ok(css.includes("hero-drift-output"), "hero product frames should have restrained motion");
+assert.ok(html.includes('name="seqvio-analytics-endpoint"'), "analytics endpoint should be configurable");
+assert.ok(html.includes('src="analytics.js"'), "analytics script should be loaded");
+assert.ok((html.match(/data-track=/g) || []).length >= 7, "primary CTA clicks should be tracked");
+assert.ok(analytics.includes("navigator.sendBeacon"), "analytics should support reliable event delivery");
+assert.ok(analytics.includes("seqvio_click_counts_v1"), "analytics should keep a local fallback count");
 assert.ok(!/TODO|TBD|lorem/i.test(html + css), "page should not contain placeholder text");
 
 const localAssetReferences = [...html.matchAll(/(?:src|href|poster|content)="([^"]+)"/g)]

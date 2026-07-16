@@ -13,6 +13,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://makesynt.github.io/seqvio-landing/assets/launch/gallery-01-agent-visual-language.png" />
     <meta name="theme-color" content="#07111f" />
+    <meta name="seqvio-analytics-endpoint" content="" />
     <link rel="canonical" href="https://makesynt.github.io/seqvio-landing/" />
     <link rel="icon" href="assets/brand/seqvio-icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -27,7 +28,7 @@
         <a href="#how-it-works">How it works</a>
         <a href="#outputs">Outputs</a>
         <a href="#demo">Demo</a>
-        <a class="nav-github" href="https://github.com/makesynt/seqvio">GitHub</a>
+        <a class="nav-github" href="https://github.com/makesynt/seqvio" data-track="nav_github">GitHub</a>
       </nav>
     </header>
 
@@ -57,8 +58,8 @@
           <p class="hero-subtitle">A visual language for coding agents to explain ideas.</p>
           <p class="hero-copy">Give your agent scenes, narration, whiteboards, sticky notes, and product-demo primitives, then turn technical thinking into a clear narrated video.</p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#install">Install Seqvio</a>
-            <a class="button secondary" href="#demo">Watch the demo</a>
+            <a class="button primary" href="#install" data-track="hero_install">Install Seqvio</a>
+            <a class="button secondary" href="#demo" data-track="hero_demo">Watch the demo</a>
           </div>
           <div class="hero-capabilities" aria-label="Seqvio visual languages">
             <span><i class="capability-mark blue"></i>Whiteboard</span>
@@ -120,7 +121,7 @@
             <p>The prompt, composition, narration, visuals, and final MP4 shown here are part of a real Seqvio workflow.</p>
           </div>
           <div class="demo-frame">
-            <video src="assets/videos/seqvio-product-hunt-en-bgm.mp4" poster="assets/images/hero-poster.jpg" controls playsinline preload="metadata"></video>
+            <video src="assets/videos/seqvio-product-hunt-en-bgm.mp4" poster="assets/images/hero-poster.jpg" controls playsinline preload="metadata" data-track="demo_video"></video>
           </div>
         </div>
       </section>
@@ -153,7 +154,7 @@
           <div class="install-stack">
             <div class="command"><span>Renderer</span><code>npm install -g @seqvio/renderer</code></div>
             <div class="command"><span>Agent skill</span><code>npx skills add makesynt/seqvio --skill seqvio -a codex -y</code></div>
-            <a class="button primary dark-button" href="https://github.com/makesynt/seqvio">View Seqvio on GitHub</a>
+            <a class="button primary dark-button" href="https://github.com/makesynt/seqvio" data-track="install_github">View Seqvio on GitHub</a>
           </div>
         </div>
       </section>
@@ -166,10 +167,11 @@
       </a>
       <p>A visual language for coding agents.</p>
       <div>
-        <a href="https://github.com/makesynt/seqvio">GitHub</a>
-        <a href="https://www.npmjs.com/package/@seqvio/renderer">npm</a>
+        <a href="https://github.com/makesynt/seqvio" data-track="footer_github">GitHub</a>
+        <a href="https://www.npmjs.com/package/@seqvio/renderer" data-track="footer_npm">npm</a>
         <span>MIT licensed</span>
       </div>
     </footer>
+    <script src="analytics.js" defer></script>
   </body>
 </html>
