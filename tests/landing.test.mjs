@@ -54,9 +54,12 @@ assert.ok(css.includes("hero-stage"), "styles.css should include the immersive h
 assert.ok(css.includes("hero-drift-output"), "hero product frames should have restrained motion");
 assert.ok(html.includes('name="seqvio-analytics-endpoint"'), "analytics endpoint should be configurable");
 assert.ok(html.includes('src="analytics.js"'), "analytics script should be loaded");
+assert.ok(html.includes('data-goatcounter="https://makeseq.goatcounter.com/count"'), "GoatCounter site should be configured");
+assert.ok(html.includes('src="https://gc.zgo.at/count.js"'), "GoatCounter client should be loaded");
 assert.ok((html.match(/data-track=/g) || []).length >= 7, "primary CTA clicks should be tracked");
 assert.ok(analytics.includes("navigator.sendBeacon"), "analytics should support reliable event delivery");
 assert.ok(analytics.includes("seqvio_click_counts_v1"), "analytics should keep a local fallback count");
+assert.ok(analytics.includes("window.goatcounter.count"), "custom events should be sent to GoatCounter");
 assert.ok(!/TODO|TBD|lorem/i.test(html + css), "page should not contain placeholder text");
 
 const localAssetReferences = [...html.matchAll(/(?:src|href|poster|content)="([^"]+)"/g)]

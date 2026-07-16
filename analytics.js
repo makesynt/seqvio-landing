@@ -31,6 +31,16 @@
 
   const record = (eventName, details = {}) => {
     retainLocalCount(eventName);
+
+    if (window.goatcounter?.count) {
+      window.goatcounter.count({
+        path: eventName,
+        title: details.destination ? `${eventName} - ${details.destination}` : eventName,
+        event: true,
+        no_session: true,
+      });
+    }
+
     if (!endpoint) return;
 
     const payload = JSON.stringify({

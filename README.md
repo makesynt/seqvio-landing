@@ -32,6 +32,6 @@ node tests/landing.test.mjs
 
 ## Click analytics
 
-Primary GitHub, npm, install, and demo interactions are tagged with `data-track` and handled by `analytics.js`. Counts are always retained locally under `seqvio_click_counts_v1` so tracking never blocks navigation.
+Page views and aggregate conversion events are sent to the `makeseq` GoatCounter site. Primary GitHub, npm, install, and demo interactions are tagged with `data-track`; video play and completion are recorded as events by `analytics.js`.
 
-For aggregate launch analytics, set the `seqvio-analytics-endpoint` meta value in `index.html` to an HTTPS endpoint that accepts JSON `POST` requests. Events contain the event name, page path, destination, timestamp, referrer host, and UTM parameters; no persistent visitor identifier is created.
+Counts are also retained locally under `seqvio_click_counts_v1` so analytics never blocks navigation. An optional `seqvio-analytics-endpoint` meta value can mirror the same events to another HTTPS JSON endpoint. No persistent visitor identifier is created by the local event layer.
