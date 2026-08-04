@@ -7,25 +7,28 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const pagePath = path.join(root, "index.html");
 const cssPath = path.join(root, "styles.css");
 const analyticsPath = path.join(root, "analytics.js");
+const launchSourcePath = path.join(root, "assets", "launch", "source.html");
 const videoPath = path.join(root, "assets", "videos", "seqvio-product-hunt-en-bgm.mp4");
 
 assert.ok(existsSync(pagePath), "index.html should exist");
 assert.ok(existsSync(cssPath), "styles.css should exist");
 assert.ok(existsSync(analyticsPath), "analytics.js should exist");
+assert.ok(existsSync(launchSourcePath), "launch artboard source should exist");
 assert.ok(existsSync(videoPath), "the Product Hunt demo MP4 should exist");
 assert.ok(statSync(videoPath).size > 2_000_000, "the Product Hunt demo MP4 should not be empty");
 
 const html = readFileSync(pagePath, "utf8");
 const css = readFileSync(cssPath, "utf8");
 const analytics = readFileSync(analyticsPath, "utf8");
+const launchSource = readFileSync(launchSourcePath, "utf8");
 
 [
-  "A visual language for coding agents to explain ideas",
+  "Open source",
   "01 · Agent prompt",
   "02 · Visual explanation",
-  "03 · Choose the visual language",
-  "Your agent already understands the idea. Now it can show it.",
-  "One explanation. Three visual languages.",
+  "03 · Evidence-backed explanation",
+  "From system evidence to an explanation people can follow.",
+  "One contract for voice, visuals, and evidence.",
   "See Seqvio explain itself",
   "Teach your agent to explain",
 ].forEach((text) => assert.ok(html.includes(text), `index.html should include: ${text}`));
@@ -61,6 +64,9 @@ assert.ok(analytics.includes("navigator.sendBeacon"), "analytics should support 
 assert.ok(analytics.includes("seqvio_click_counts_v1"), "analytics should keep a local fallback count");
 assert.ok(analytics.includes("window.goatcounter.count"), "custom events should be sent to GoatCounter");
 assert.ok(!/TODO|TBD|lorem/i.test(html + css), "page should not contain placeholder text");
+assert.ok(launchSource.includes("Turn real technical work into explainable video."), "launch artboards should use current positioning");
+assert.ok(launchSource.includes("Voice, visuals, timing, and evidence stay together."), "launch artboards should describe the current explanation contract");
+assert.ok(!launchSource.includes("Three visual languages"), "launch artboards should not restore retired positioning");
 
 const localAssetReferences = [...html.matchAll(/(?:src|href|poster|content)="([^"]+)"/g)]
   .map((match) => match[1])

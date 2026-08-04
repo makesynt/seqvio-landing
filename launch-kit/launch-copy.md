@@ -6,13 +6,13 @@
 
 Seqvio
 
-**Tagline (52/60 characters)**
+**Tagline (46/60 characters)**
 
-A visual language for coding agents to explain ideas
+Open-source explainer videos for coding agents
 
 **Description (344/500 characters)**
 
-Seqvio is an open-source explainer-video toolkit for coding agents. It gives agents a visual vocabulary for scenes, narration, whiteboards, sticky-note workshops, and product walkthroughs, so technical ideas become clear narrated videos instead of generic motion. Author in React/TSX, inspect key frames, align voice, and render locally to MP4.
+Seqvio turns technical ideas and real terminal/browser evidence into narration-locked explainer videos. Review an EditorialPlan and VisualDesignBrief, compile an inspectable ExplainerDocument, bind phrases to visual actions with ExplanationBeats, run QA, and render locally. The authoring path is public; capture adapters are experimental.
 
 **Suggested launch tags**
 
@@ -28,7 +28,7 @@ Hi Product Hunt,
 
 I built Seqvio because coding agents can explain a complex system in text, but they still lack a useful visual vocabulary. Asking for "a video" often produces generic motion instead of a sequence designed to teach.
 
-Seqvio gives an agent concrete primitives for scenes, narration, whiteboards, sticky-note workshops, and product walkthroughs. The result is a real React/TSX composition that can be reviewed as key frames and rendered locally to an MP4.
+Seqvio gives an agent a reviewable authoring path and a formal execution contract. The result is an ExplainerDocument where spoken phrases, visual actions, and observed evidence can be checked before a local MP4 is rendered.
 
 The under-a-minute demo on this page was made with the same workflow it shows. Seqvio is open source and MIT licensed.
 
@@ -36,20 +36,20 @@ I would especially value feedback on two questions: Which kinds of technical exp
 
 ## Gallery Captions
 
-1. A visual language for coding agents to explain ideas.
+1. Turn real technical work into explainable video.
 2. Start with a real agent prompt; finish with an explanation made to be understood.
-3. Choose the visual language that fits the idea: whiteboard, sticky notes, or product demo.
+3. Bind voice, visual actions, and evidence in one ExplanationBeat contract.
 4. Review the plan and key frames, then render a narrated MP4.
 
 ## Demo Video
 
 **YouTube title**
 
-Seqvio in under a minute - A visual language for coding agents
+Seqvio in one minute - Evidence-backed explainer videos for coding agents
 
 **YouTube description**
 
-Seqvio is an open-source visual language for coding agents. Give your agent scenes, narration, whiteboards, sticky notes, and product-demo primitives, then render a clear narrated explanation to MP4.
+Seqvio is an open-source framework for coding-agent explainers. Turn technical ideas or real system evidence into a reviewable ExplainerDocument, align narration at phrase level, run QA, and render a clear local MP4.
 
 GitHub: https://github.com/makesynt/seqvio
 npm: https://www.npmjs.com/package/@seqvio/renderer
@@ -60,17 +60,17 @@ Video file for upload: `assets/videos/seqvio-product-hunt-en-bgm.mp4`
 
 **X / Bluesky**
 
-We launched Seqvio: an open-source visual language for coding agents to explain ideas.
+We launched Seqvio: open-source explainer videos for coding agents, grounded in technical source material and real system evidence.
 
-It gives agents concrete primitives for narration, whiteboards, sticky-note workshops, and product walkthroughs, so technical ideas become videos designed to teach.
+It gives agents a reviewable editorial path, phrase-level explanation timing, deterministic QA, and local rendering, so technical ideas become videos designed to teach.
 
 See the launch and tell us what an agent should explain next: [Product Hunt URL]
 
 **LinkedIn**
 
-Coding agents can reason through complex systems, but their visual explanations often collapse into generic motion.
+Coding agents can reason through complex systems, but their visual explanations often collapse into generic motion or drift away from what actually happened.
 
-Seqvio gives agents a practical visual vocabulary: scenes, narration, whiteboards, sticky-note workshops, and product walkthroughs. Agents can author the explanation in React/TSX, inspect key frames, and render it locally to MP4.
+Seqvio gives agents a practical explanation contract: EditorialPlan, VisualDesignBrief, ExplainerDocument, and ExplanationBeat. Agents can author or capture the explanation, inspect key frames, and render it locally to MP4.
 
 Today we are sharing Seqvio on Product Hunt. The product is open source and MIT licensed, and the under-a-minute demo was created with the workflow it shows.
 
