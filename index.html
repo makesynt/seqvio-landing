@@ -3,16 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Seqvio - Explain real technical work with video</title>
-    <meta name="description" content="Seqvio turns technical ideas and real terminal or browser evidence into narration-locked explainer videos for coding agents." />
+    <title>Seqvio - An explainer video toolkit for agents</title>
+    <meta
+      name="description"
+      content="Seqvio turns real agent work and authored ideas into reviewable, narration-locked explainer videos with evidence, phrase-level timing, and deterministic QA."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Seqvio - Explain real technical work with video" />
-    <meta property="og:description" content="Turn technical ideas and real system evidence into narration-locked explainer videos." />
-    <meta property="og:url" content="https://makesynt.github.io/seqvio-landing/" />
-    <meta property="og:image" content="https://makesynt.github.io/seqvio-landing/assets/launch/gallery-01-agent-visual-language.png" />
+    <meta
+      property="og:title"
+      content="Seqvio - An explainer video toolkit for agents"
+    />
+    <meta
+      property="og:description"
+      content="Agent work, explained with real evidence, phrase-anchored timing, and deterministic QA."
+    />
+    <meta
+      property="og:url"
+      content="https://makesynt.github.io/seqvio-landing/"
+    />
+    <meta
+      property="og:image"
+      content="https://makesynt.github.io/seqvio-landing/assets/images/hero-poster.jpg"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://makesynt.github.io/seqvio-landing/assets/launch/gallery-01-agent-visual-language.png" />
-    <meta name="theme-color" content="#07111f" />
+    <meta
+      name="twitter:image"
+      content="https://makesynt.github.io/seqvio-landing/assets/images/hero-poster.jpg"
+    />
+    <meta name="theme-color" content="#060b12" />
     <meta name="seqvio-analytics-endpoint" content="" />
     <link rel="canonical" href="https://makesynt.github.io/seqvio-landing/" />
     <link rel="icon" href="assets/brand/seqvio-icon.svg" type="image/svg+xml" />
@@ -25,136 +43,427 @@
         <span>Seqvio</span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
-        <a href="#how-it-works">How it works</a>
-        <a href="#outputs">Outputs</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#timing">Timing</a>
+        <a href="#applications">Use cases</a>
         <a href="#demo">Demo</a>
-        <a class="nav-github" href="https://github.com/makesynt/seqvio" data-track="nav_github">GitHub</a>
+        <a
+          class="nav-github"
+          href="https://github.com/makesynt/seqvio"
+          data-track="nav_github"
+          >GitHub</a
+        >
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-backdrop" aria-hidden="true">
-          <div class="hero-grid"></div>
-          <div class="hero-stage">
-            <figure class="hero-frame hero-frame-prompt">
-              <span>01 · Agent prompt</span>
-              <img src="assets/images/agent-prompt.jpg" alt="" />
-            </figure>
-            <figure class="hero-frame hero-frame-output">
-              <span>02 · Visual explanation</span>
-              <img src="assets/images/rag-explanation.jpg" alt="" />
-            </figure>
-            <figure class="hero-frame hero-frame-languages">
-              <span>03 · Evidence-backed explanation</span>
-              <img src="assets/images/visual-languages.jpg" alt="" />
-            </figure>
-          </div>
-        </div>
+        <iframe
+          class="hero-video"
+          src="https://www.youtube-nocookie.com/embed/VX6tKv2mwwk?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=VX6tKv2mwwk&amp;rel=0&amp;modestbranding=1"
+          title="Seqvio product demo"
+          allow="autoplay; fullscreen"
+          aria-hidden="true"
+        ></iframe>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Open source · Built for coding agents</p>
+          <p class="eyebrow">Open source · Local · Agent-driven</p>
           <h1 id="hero-title">Seqvio</h1>
-          <p class="hero-subtitle">Turn real technical work into explainable video.</p>
-          <p class="hero-copy">Seqvio gives coding agents a reviewable plan, an executable explanation contract, phrase-level timing, and local QA for narrated technical videos.</p>
+          <p class="hero-subtitle">An explainer video toolkit for agents</p>
+          <p class="hero-copy">
+            Turn real terminal sessions, browser runs, and authored ideas into
+            reviewable videos where narration, visuals, and evidence move
+            together.
+          </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#install" data-track="hero_install">Install Seqvio</a>
-            <a class="button secondary" href="#demo" data-track="hero_demo">Watch the demo</a>
+            <a class="button primary" href="#demo" data-track="hero_demo">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 18 6-6-6-6v12Z"></path>
+              </svg>
+              Watch the product demo
+            </a>
+            <a
+              class="button secondary"
+              href="#install"
+              data-track="hero_install"
+              >Install the skill</a
+            >
           </div>
-          <div class="hero-capabilities" aria-label="Seqvio capabilities">
-            <span><i class="capability-mark blue"></i>Reviewable plans</span>
-            <span><i class="capability-mark amber"></i>ExplanationBeats</span>
-            <span><i class="capability-mark green"></i>Local deterministic QA</span>
-          </div>
-        </div>
-        <a class="hero-cue" href="#how-it-works">See the agent workflow <span aria-hidden="true">↓</span></a>
-      </section>
-
-      <section class="section transformation" id="how-it-works" aria-labelledby="transform-title">
-        <div class="section-inner">
-          <div class="section-heading centered">
-            <p class="eyebrow">From request to explanation</p>
-            <h2 id="transform-title">From system evidence to an explanation people can follow.</h2>
-            <p>Start with technical source material or a real terminal/browser capture. Seqvio keeps editorial decisions, visual direction, spoken phrases, and observed evidence reviewable before rendering.</p>
-          </div>
-          <div class="before-after">
-            <figure>
-              <img src="assets/images/agent-prompt.jpg" alt="A coding-agent task becoming a reviewable explainer plan" />
-              <figcaption><span>01</span> Review the explanation plan</figcaption>
-            </figure>
-            <div class="flow-arrow" aria-hidden="true">→</div>
-            <figure>
-              <img src="assets/images/rag-explanation.jpg" alt="A Seqvio frame tracing a native-module CI failure from symptom to root cause" />
-              <figcaption><span>02</span> Bind evidence to the spoken explanation</figcaption>
-            </figure>
+          <div class="hero-proof" aria-label="Core Seqvio capabilities">
+            <span>Real evidence</span>
+            <span>Phrase-anchored timing</span>
+            <span>Deterministic QA</span>
           </div>
         </div>
+        <a class="hero-cue" href="#workflow">See how it works</a>
       </section>
 
-      <section class="section outputs" id="outputs" aria-labelledby="outputs-title">
+      <section
+        class="section workflow"
+        id="workflow"
+        aria-labelledby="workflow-title"
+      >
         <div class="section-inner">
-          <div class="outputs-copy">
-            <div class="section-heading">
-              <p class="eyebrow">Executable explanation</p>
-              <h2 id="outputs-title">One contract for voice, visuals, and evidence.</h2>
-              <p>Use authored scenes for models and capture-derived scenes for what actually happened. The same ExplanationBeat keeps the claim, action, and evidence together.</p>
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">One connected workflow</p>
+              <h2 id="workflow-title">
+                From real agent work to an explanation
+              </h2>
             </div>
-            <div class="language-list" aria-label="Seqvio explanation contract">
-              <div><strong>EditorialPlan</strong><span>Choose the claim, scope, and explanation structure.</span></div>
-              <div><strong>ExplainerDocument</strong><span>Compile an inspectable formal execution IR.</span></div>
-              <div><strong>ExplanationBeat</strong><span>Align spoken phrases with visual actions and evidence.</span></div>
+            <p>
+              Seqvio keeps the source activity, editorial decisions, spoken
+              phrases, and final frames connected instead of reconstructing the
+              story after the fact.
+            </p>
+          </div>
+
+          <ol class="process-rail" aria-label="Seqvio workflow">
+            <li>
+              <span class="process-number">01</span>
+              <div class="process-icon terminal-icon" aria-hidden="true">
+                <i>&gt;_</i>
+                <b></b>
+              </div>
+              <h3>Capture real evidence</h3>
+              <p>
+                Preserve terminal and browser activity in the order it happened.
+              </p>
+            </li>
+            <li>
+              <span class="process-number">02</span>
+              <div class="process-icon story-icon" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <h3>Review the story</h3>
+              <p>
+                Make the claim, evidence order, and visual direction
+                inspectable.
+              </p>
+            </li>
+            <li>
+              <span class="process-number">03</span>
+              <div class="process-icon timing-icon" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <h3>Align voice and visuals</h3>
+              <p>
+                Bind exact spoken phrases to actions, targets, and evidence.
+              </p>
+            </li>
+            <li>
+              <span class="process-number">04</span>
+              <div class="process-icon check-icon" aria-hidden="true">
+                <i></i>
+              </div>
+              <h3>Validate and render</h3>
+              <p>
+                Catch blank frames, overflow, pacing, and broken references.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="section timing"
+        id="timing"
+        aria-labelledby="timing-title"
+      >
+        <div class="section-inner timing-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Joint explanation timing</p>
+            <h2 id="timing-title">The voice sets the clock</h2>
+            <p>
+              Seqvio resolves synthesized speech first, then maps each visual
+              action to the phrase it explains. Authored and captured order
+              stays intact without hand-tuned padding.
+            </p>
+            <div class="timing-notes" aria-label="Timing benefits">
+              <span
+                ><b>Exact anchors</b> Spoken phrases, not guessed
+                timestamps</span
+              >
+              <span
+                ><b>Semantic order</b> Visual steps keep their intended
+                sequence</span
+              >
+              <span
+                ><b>One contract</b> Narration, targets, actions, and
+                evidence</span
+              >
             </div>
           </div>
-          <figure class="wide-frame">
-            <img src="assets/images/visual-languages.jpg" alt="Authored model, reviewable plan, and capture evidence presented by Seqvio" />
-          </figure>
+
+          <div
+            class="timing-board"
+            aria-label="Phrase anchored timing visualization"
+          >
+            <div class="time-ruler" aria-hidden="true">
+              <span>0.0s</span><span>1.8s</span><span>3.7s</span
+              ><span>5.6s</span>
+            </div>
+            <div class="timeline-row speech-row">
+              <div class="row-label">
+                <strong>Measured speech</strong><span>resolved after TTS</span>
+              </div>
+              <div class="speech-segments">
+                <div style="--segment: 0">
+                  <span>capture the run</span><b>1.42s</b>
+                  <i class="waveform" aria-hidden="true"></i>
+                </div>
+                <div style="--segment: 1">
+                  <span>review the story</span><b>1.58s</b>
+                  <i class="waveform" aria-hidden="true"></i>
+                </div>
+                <div style="--segment: 2">
+                  <span>show the evidence</span><b>1.36s</b>
+                  <i class="waveform" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="timing-links" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+            <div class="timeline-row visual-row">
+              <div class="row-label">
+                <strong>Visual sequence</strong><span>same semantic order</span>
+              </div>
+              <div class="visual-segments">
+                <div>
+                  <b>01</b><span>Terminal evidence</span><small>source</small>
+                </div>
+                <div>
+                  <b>02</b><span>Story structure</span><small>action</small>
+                </div>
+                <div>
+                  <b>03</b><span>Evidence focus</span><small>target</small>
+                </div>
+              </div>
+            </div>
+            <i class="timing-playhead" aria-hidden="true"></i>
+          </div>
         </div>
       </section>
 
       <section class="section demo" id="demo" aria-labelledby="demo-title">
         <div class="section-inner">
-          <div class="section-heading demo-heading">
+          <div class="section-heading split-heading demo-heading">
             <div>
-              <p class="eyebrow">Product demo · Under a minute</p>
-              <h2 id="demo-title">See Seqvio explain itself</h2>
+              <p class="eyebrow">Product Hunt demo · 72 seconds</p>
+              <h2 id="demo-title">See the complete system in motion</h2>
             </div>
-            <p>The plan, composition, narration, visual evidence, QA report, and final MP4 shown here are part of one Seqvio workflow.</p>
+            <p>
+              Follow one real skill evaluation from an agent session to browser
+              evidence, story review, phrase-level timing, QA, and reusable
+              explanation formats.
+            </p>
           </div>
           <div class="demo-frame">
-            <video src="assets/videos/seqvio-product-hunt-en-bgm.mp4" poster="assets/images/hero-poster.jpg" controls playsinline preload="metadata" data-track="demo_video"></video>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/VX6tKv2mwwk?rel=0&amp;modestbranding=1"
+              title="Seqvio product demo"
+              loading="lazy"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen
+              data-track="demo_video"
+            ></iframe>
           </div>
         </div>
       </section>
 
-      <section class="section workflow" aria-labelledby="workflow-title">
-        <div class="section-inner workflow-layout">
+      <section
+        class="section applications"
+        id="applications"
+        aria-labelledby="applications-title"
+      >
+        <div class="section-inner">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">One system, many explanations</p>
+              <h2 id="applications-title">
+                Use the visual form the claim needs
+              </h2>
+            </div>
+            <p>
+              The workflow stays consistent while the evidence and visual
+              structure change for each explanation job.
+            </p>
+          </div>
+
+          <div class="application-grid">
+            <article>
+              <div class="application-visual diff-visual" aria-hidden="true">
+                <span class="diff-file">before</span
+                ><span class="diff-file">after</span> <i class="removed"></i
+                ><i class="added"></i><i class="added short"></i>
+              </div>
+              <div class="application-copy">
+                <span>01</span>
+                <h3>PR video review</h3>
+              </div>
+              <p>
+                Turn a change, its evidence, and the review conclusion into a
+                concise walkthrough.
+              </p>
+            </article>
+
+            <article>
+              <div class="application-visual matrix-visual" aria-hidden="true">
+                <span>Fit</span><i style="--score: 86%"></i
+                ><i style="--score: 68%"></i> <span>Speed</span
+                ><i style="--score: 72%"></i><i style="--score: 91%"></i>
+                <span>Control</span><i style="--score: 94%"></i
+                ><i style="--score: 61%"></i>
+              </div>
+              <div class="application-copy">
+                <span>02</span>
+                <h3>Tool comparison</h3>
+              </div>
+              <p>
+                Compare products across the criteria that matter, then make the
+                trade-off visible.
+              </p>
+            </article>
+
+            <article>
+              <div class="application-visual steps-visual" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><b></b>
+              </div>
+              <div class="application-copy">
+                <span>03</span>
+                <h3>Tutorial verification</h3>
+              </div>
+              <p>
+                Walk through each instruction and show whether the observed
+                result matches the claim.
+              </p>
+            </article>
+
+            <article>
+              <div class="application-visual graph-visual" aria-hidden="true">
+                <span>Input</span><span>Context</span><b>Mechanism</b
+                ><span>Effect A</span><span>Effect B</span><i>Why</i>
+              </div>
+              <div class="application-copy">
+                <span>04</span>
+                <h3>Concept explanation</h3>
+              </div>
+              <p>
+                Build a mechanism map that connects inputs, context, effects,
+                and the reason they follow.
+              </p>
+            </article>
+
+            <article>
+              <div class="application-visual product-visual" aria-hidden="true">
+                <div><i></i><i></i><i></i></div>
+                <span><b>82</b> clarity</span><span><b>91</b> proof</span
+                ><span><b>76</b> fit</span>
+              </div>
+              <div class="application-copy">
+                <span>05</span>
+                <h3>Product review</h3>
+              </div>
+              <p>
+                Pair visible product states with annotated findings, measured
+                scores, and a verdict.
+              </p>
+            </article>
+
+            <article>
+              <div class="application-visual skill-visual" aria-hidden="true">
+                <div class="skill-browser"><i></i><b></b><b></b><b></b></div>
+                <div class="skill-results">
+                  <span>desktop ✓</span><span>mobile ✓</span
+                  ><span>build ✓</span>
+                </div>
+              </div>
+              <div class="application-copy">
+                <span>06</span>
+                <h3>Skill evaluation</h3>
+              </div>
+              <p>
+                Connect the agent session, generated artifact, browser states,
+                and evaluation evidence.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contract" aria-labelledby="contract-title">
+        <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Real workflow</p>
-            <h2 id="workflow-title">Made to work where agents work</h2>
-            <p>Seqvio is an open-source local framework with an optional agent skill. Review the plan, compile an ExplainerDocument, align narration, run QA, and render to MP4. Terminal and browser capture adapters are experimental.</p>
-            <ol class="pipeline" aria-label="Seqvio workflow">
-              <li><span>01</span> Review EditorialPlan and VisualDesignBrief</li>
-              <li><span>02</span> Compile beats and observed evidence</li>
-              <li><span>03</span> Run QA and render locally</li>
-            </ol>
+            <p class="eyebrow">Explainer-native by design</p>
+            <h2 id="contract-title">
+              A production contract agents can inspect
+            </h2>
           </div>
-          <figure class="workflow-frame">
-            <img src="assets/images/real-workflow.jpg" alt="Seqvio command-line workflow with validation, snapshots, and rendering" />
-          </figure>
+          <div class="contract-list">
+            <div>
+              <span>01</span><strong>ExplainerDocument</strong>
+              <p>
+                A structured source for captured and agent-authored explanations
+                that compiles to editable TSX.
+              </p>
+            </div>
+            <div>
+              <span>02</span><strong>Scene vocabulary</strong>
+              <p>
+                Whiteboards, diagrams, product walkthroughs, terminal sessions,
+                browser evidence, and annotations.
+              </p>
+            </div>
+            <div>
+              <span>03</span><strong>ExplanationBeat</strong>
+              <p>
+                One place for spoken phrases, visual actions, attention targets,
+                media, and observed facts.
+              </p>
+            </div>
+            <div>
+              <span>04</span><strong>Verification loop</strong>
+              <p>
+                Deterministic frame and timing checks that produce diagnostics
+                an agent can act on.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section install" id="install" aria-labelledby="install-title">
+      <section
+        class="section install"
+        id="install"
+        aria-labelledby="install-title"
+      >
         <div class="section-inner install-layout">
           <div class="section-heading">
             <p class="eyebrow">Open source · MIT</p>
-            <h2 id="install-title">Teach your agent to explain</h2>
-            <p>Install the renderer, then add the Seqvio skill to your coding agent. Capture adapters have separate experimental prerequisites.</p>
+            <h2 id="install-title">Give your agent an explainer toolkit</h2>
+            <p>
+              Install the local renderer, add the Seqvio skill to your agent,
+              and keep every explanation reviewable in the same repository as
+              the work.
+            </p>
           </div>
           <div class="install-stack">
-            <div class="command"><span>Renderer</span><code>npm install -g @seqvio/renderer</code></div>
-            <div class="command"><span>Agent skill</span><code>npx skills add makesynt/seqvio --skill seqvio -a codex -y</code></div>
-            <a class="button primary dark-button" href="https://github.com/makesynt/seqvio" data-track="install_github">View Seqvio on GitHub</a>
+            <div class="command">
+              <span>Renderer</span><code>npm install -g @seqvio/renderer</code>
+            </div>
+            <div class="command">
+              <span>Agent skill</span
+              ><code
+                >npx skills add makesynt/seqvio --skill seqvio -a codex -y</code
+              >
+            </div>
+            <a
+              class="button primary dark-button"
+              href="https://github.com/makesynt/seqvio"
+              data-track="install_github"
+              >View Seqvio on GitHub</a
+            >
           </div>
         </div>
       </section>
@@ -165,14 +474,24 @@
         <img src="assets/brand/seqvio-icon.svg" alt="" />
         <span>Seqvio</span>
       </a>
-      <p>Explain real technical work with narration-locked video.</p>
+      <p>Agent work, explained with Seqvio</p>
       <div>
-        <a href="https://github.com/makesynt/seqvio" data-track="footer_github">GitHub</a>
-        <a href="https://www.npmjs.com/package/@seqvio/renderer" data-track="footer_npm">npm</a>
+        <a href="https://github.com/makesynt/seqvio" data-track="footer_github"
+          >GitHub</a
+        >
+        <a
+          href="https://www.npmjs.com/package/@seqvio/renderer"
+          data-track="footer_npm"
+          >npm</a
+        >
         <span>MIT licensed</span>
       </div>
     </footer>
-    <script data-goatcounter="https://makeseq.goatcounter.com/count" src="https://gc.zgo.at/count.js" defer></script>
+    <script
+      data-goatcounter="https://makeseq.goatcounter.com/count"
+      src="https://gc.zgo.at/count.js"
+      defer
+    ></script>
     <script src="analytics.js" defer></script>
   </body>
 </html>
