@@ -1,37 +1,30 @@
-# Seqvio Landing Page
+# Seqvio Studio landing page
 
-Static landing page and Product Hunt launch kit for Seqvio.
+A static, bilingual landing page for Seqvio Studio. It contains the product introduction, six selected style samples, and links to the film, guide and Windows releases. No build step is required.
 
-## Preview
+## Preview and test
 
-Open `index.html` directly in a browser, or serve this folder:
+Open index.html in a browser, or serve this folder with a static server.
 
-```bash
-npx serve .
-```
+    npx serve .
+    node tests/landing.test.mjs
+    node tests/legacy-landing.test.mjs
 
-## Launch kit
+The language choice is stored locally when browser storage is available. Hover over a gallery card for a muted preview, or select it to open the full sample with playback controls. Previews load on demand and respect reduced-motion and data-saving preferences.
 
-- `assets/launch/thumbnail.png` - 240 x 240 launch thumbnail
-- `assets/launch/gallery-*.png` - 1270 x 760 gallery images
-- `launch-kit/launch-copy.md` - listing, maker comment, and social copy
-- `launch-kit/launch-checklist.md` - launch readiness checklist
-- `assets/launch/source.html` - editable source artboards
+## Assets
 
-Regenerate the PNG assets after changing the artboards:
+- assets/brand/seqvio-studio-mark.svg is the Studio application mark.
+- assets/seqvio-hero-art-v2.png is an original hero artwork generated with the built-in ImageGen tool.
+- assets/studio-workbench.webp is a capture of the Studio element editor with a demo project.
+- assets/style-covers/ contains stills selected from the six original sample videos.
+- assets/style-samples/ contains six publicly released Studio samples. Their SHA-256 values were verified against the Studio release manifest; CREDITS.md retains the release's music attribution.
+- The previous Seqvio renderer landing page and stylesheet remain as seqvio-legacy.html and legacy-styles.css. Original Product Hunt assets and launch-kit files are retained.
 
-```bash
-node scripts/export-launch-assets.mjs
-```
+### Hero artwork prompt
 
-## Test
-
-```bash
-node tests/landing.test.mjs
-```
+Use case: stylized-concept. Asset type: an original refined landing-page hero artwork for a creative video studio. Create a single sculptural, flowing translucent ribbon, folded like one continuous sheet of frosted glass and silk, suggesting motion and imagination without forming a literal icon. Quiet contemporary art-gallery photography with extraordinary craftsmanship and subtle material detail. An airy warm ivory background, soft natural sidelight, gentle shadow, muted blush apricot, misty lavender and a small hint of cool blue in the translucent material. Wide landscape composition; the artwork sits mainly in the right half, with generous calm empty space on the left for page typography. Elegant, restrained, poetic, no visual clutter. No text, logos, UI, frames, gradients with banding, sparkles, particles or watermark.
 
 ## Click analytics
 
-Page views and aggregate conversion events are sent to the `makeseq` GoatCounter site. Primary GitHub, npm, install, and demo interactions are tagged with `data-track`; video play and completion are recorded as events by `analytics.js`.
-
-Counts are also retained locally under `seqvio_click_counts_v1` so analytics never blocks navigation. An optional `seqvio-analytics-endpoint` meta value can mirror the same events to another HTTPS JSON endpoint. No persistent visitor identifier is created by the local event layer.
+Page views and aggregate conversion events use the existing makeseq GoatCounter configuration. Tagged interactions are also retained locally under seqvio_click_counts_v1; the optional seqvio-analytics-endpoint meta value can mirror events to another HTTPS JSON endpoint.

@@ -1,497 +1,167 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Seqvio - An explainer video toolkit for agents</title>
-    <meta
-      name="description"
-      content="Seqvio turns real agent work and authored ideas into reviewable, narration-locked explainer videos with evidence, phrase-level timing, and deterministic QA."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Seqvio - An explainer video toolkit for agents"
-    />
-    <meta
-      property="og:description"
-      content="Agent work, explained with real evidence, phrase-anchored timing, and deterministic QA."
-    />
-    <meta
-      property="og:url"
-      content="https://makesynt.github.io/seqvio-landing/"
-    />
-    <meta
-      property="og:image"
-      content="https://makesynt.github.io/seqvio-landing/assets/images/hero-poster.jpg"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://makesynt.github.io/seqvio-landing/assets/images/hero-poster.jpg"
-    />
-    <meta name="theme-color" content="#060b12" />
-    <meta name="seqvio-analytics-endpoint" content="" />
-    <link rel="canonical" href="https://makesynt.github.io/seqvio-landing/" />
-    <link rel="icon" href="assets/brand/seqvio-icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Seqvio home">
-        <img src="assets/brand/seqvio-icon.svg" alt="" />
-        <span>Seqvio</span>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seqvio Studio — 想象，即将上演</title>
+  <meta name="description" content="Seqvio Studio 是一款 AI 辅助的本地视频创作工作台，让想法成为影片。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Seqvio Studio — 想象，即将上演">
+  <meta property="og:description" content="你的 AI 视频创作工作台。">
+  <meta property="og:url" content="https://makesynt.github.io/seqvio-landing/">
+  <meta property="og:image" content="https://makesynt.github.io/seqvio-landing/assets/seqvio-hero-art-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://makesynt.github.io/seqvio-landing/assets/seqvio-hero-art-v2.png">
+  <meta name="theme-color" content="#101014">
+  <meta name="seqvio-analytics-endpoint" content="">
+  <link rel="canonical" href="https://makesynt.github.io/seqvio-landing/">
+  <link rel="icon" href="assets/brand/seqvio-studio-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-zh="跳至正文" data-en="Skip to content">跳至正文</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Seqvio Studio home">
+        <img src="assets/brand/seqvio-studio-mark.svg" alt="">
+        <span>seqvio <span>studio</span></span>
       </a>
-      <nav class="nav-links" aria-label="Page sections">
-        <a href="#workflow">Workflow</a>
-        <a href="#timing">Timing</a>
-        <a href="#applications">Use cases</a>
-        <a href="#demo">Demo</a>
-        <a
-          class="nav-github"
-          href="https://github.com/makesynt/seqvio"
-          data-track="nav_github"
-          >GitHub</a
-        >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#styles" data-track="hero_explore" data-zh="风格样片" data-en="Showreel">风格样片</a>
+        <a class="nav-guide" href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-zh-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-en-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.en.md" data-track="nav_guide" data-zh="使用指南" data-en="Guide">使用指南</a>
       </nav>
+      <div class="header-actions">
+        <button class="language-toggle" type="button" aria-label="Switch to English" data-track="language_switch">EN</button>
+        <a class="header-download" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="nav_download"><span data-zh="下载" data-en="Download">下载</span><span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <iframe
-          class="hero-video"
-          src="https://www.youtube-nocookie.com/embed/VX6tKv2mwwk?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=VX6tKv2mwwk&amp;rel=0&amp;modestbranding=1"
-          title="Seqvio product demo"
-          allow="autoplay; fullscreen"
-          aria-hidden="true"
-        ></iframe>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Open source · Local · Agent-driven</p>
-          <h1 id="hero-title">Seqvio</h1>
-          <p class="hero-subtitle">An explainer video toolkit for agents</p>
-          <p class="hero-copy">
-            Turn real terminal sessions, browser runs, and authored ideas into
-            reviewable videos where narration, visuals, and evidence move
-            together.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#demo" data-track="hero_demo">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m9 18 6-6-6-6v12Z"></path>
-              </svg>
-              Watch the product demo
-            </a>
-            <a
-              class="button secondary"
-              href="#install"
-              data-track="hero_install"
-              >Install the skill</a
-            >
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1 id="hero-title"><span data-zh="想象，" data-en="Vision">想象，</span><span data-zh="即将上演。" data-en="Poised for its premiere.">即将上演。</span></h1>
+            <p class="hero-subtitle" data-zh="为 AI 视频创作而生的本地工作台。" data-en="A local workspace for AI video creation.">为 AI 视频创作而生的本地工作台。</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="hero_download"><span data-zh="获取 Windows 版" data-en="Get it for Windows">获取 Windows 版</span><span aria-hidden="true">↗</span></a>
+              <a class="film-link" href="https://youtu.be/PKEJ8uIZQto" target="_blank" rel="noopener noreferrer" data-track="hero_film"><span class="film-play" aria-hidden="true">▶</span><span data-zh="观看介绍" data-en="Watch the film">观看介绍</span></a>
+            </div>
+            <p class="hero-note" data-zh="Windows x64 · 需配置 Agent" data-en="Windows x64 · Agent setup required">Windows x64 · 需配置 Agent</p>
           </div>
-          <div class="hero-proof" aria-label="Core Seqvio capabilities">
-            <span>Real evidence</span>
-            <span>Phrase-anchored timing</span>
-            <span>Deterministic QA</span>
+          <div class="hero-art">
+            <img class="hero-workbench" src="assets/studio-workbench.webp" width="1440" height="900"
+              alt="Seqvio Studio 的元素编辑工作台，显示画布、分镜和动画时间轴"
+              data-en-alt="Seqvio Studio editor showing the canvas, scenes, and animation timeline"
+              data-zh-alt="Seqvio Studio 的元素编辑工作台，显示画布、分镜和动画时间轴">
           </div>
         </div>
-        <a class="hero-cue" href="#workflow">See how it works</a>
       </section>
+      <section class="styles-section" id="styles" aria-labelledby="styles-title">
+        <div class="section-heading">
+          <h2 id="styles-title" data-zh="风格画廊" data-en="Style gallery">风格画廊</h2>
+          <a class="subtle-link" href="https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1" data-track="all_styles"><span data-zh="在 GitHub 查看全部 54 支样片" data-en="All 54 samples on GitHub">在 GitHub 查看全部 54 支样片</span><span aria-hidden="true">↗</span></a>
+        </div>
 
-      <section
-        class="section workflow"
-        id="workflow"
-        aria-labelledby="workflow-title"
-      >
-        <div class="section-inner">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">One connected workflow</p>
-              <h2 id="workflow-title">
-                From real agent work to an explanation
-              </h2>
-            </div>
-            <p>
-              Seqvio keeps the source activity, editorial decisions, spoken
-              phrases, and final frames connected instead of reconstructing the
-              story after the fact.
-            </p>
-          </div>
-
-          <ol class="process-rail" aria-label="Seqvio workflow">
+        <ul class="sample-gallery">
             <li>
-              <span class="process-number">01</span>
-              <div class="process-icon terminal-icon" aria-hidden="true">
-                <i>&gt;_</i>
-                <b></b>
-              </div>
-              <h3>Capture real evidence</h3>
-              <p>
-                Preserve terminal and browser activity in the order it happened.
-              </p>
+              <a class="sample-card" aria-labelledby="sample-stick-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/motion-stickman-d1d73606e2309436.mp4"
+                 data-video="assets/style-samples/motion-stickman-d1d73606e2309436.mp4" data-track="sample_stickman">
+                <span class="sample-frame sample-stick" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/motion-stickman.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-stick-name" data-zh="火柴人动画" data-en="Stickman">火柴人动画</span>
+              </a>
             </li>
             <li>
-              <span class="process-number">02</span>
-              <div class="process-icon story-icon" aria-hidden="true">
-                <i></i><i></i><i></i>
-              </div>
-              <h3>Review the story</h3>
-              <p>
-                Make the claim, evidence order, and visual direction
-                inspectable.
-              </p>
+              <a class="sample-card" aria-labelledby="sample-bauhaus-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/bauhaus-041e1caad83c2189.mp4"
+                 data-video="assets/style-samples/bauhaus-041e1caad83c2189.mp4" data-track="sample_bauhaus">
+                <span class="sample-frame sample-bauhaus" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/bauhaus.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-bauhaus-name" data-zh="包豪斯几何" data-en="Bauhaus">包豪斯几何</span>
+              </a>
             </li>
             <li>
-              <span class="process-number">03</span>
-              <div class="process-icon timing-icon" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i>
-              </div>
-              <h3>Align voice and visuals</h3>
-              <p>
-                Bind exact spoken phrases to actions, targets, and evidence.
-              </p>
+              <a class="sample-card" aria-labelledby="sample-flat-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/kurzgesagt-flat-09edc2b324906276.mp4"
+                 data-video="assets/style-samples/kurzgesagt-flat-09edc2b324906276.mp4" data-track="sample_flat">
+                <span class="sample-frame sample-flat" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/kurzgesagt-flat.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-flat-name" data-zh="扁平科普" data-en="Flat explainer">扁平科普</span>
+              </a>
             </li>
             <li>
-              <span class="process-number">04</span>
-              <div class="process-icon check-icon" aria-hidden="true">
-                <i></i>
-              </div>
-              <h3>Validate and render</h3>
-              <p>
-                Catch blank frames, overflow, pacing, and broken references.
-              </p>
+              <a class="sample-card" aria-labelledby="sample-blackboard-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/blackboard-aec096e78f7d2298.mp4"
+                 data-video="assets/style-samples/blackboard-aec096e78f7d2298.mp4" data-track="sample_blackboard">
+                <span class="sample-frame sample-blackboard" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/blackboard.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-blackboard-name" data-zh="手绘黑板" data-en="Blackboard">手绘黑板</span>
+              </a>
             </li>
-          </ol>
+            <li>
+              <a class="sample-card" aria-labelledby="sample-pixel-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/pixel-1f26cb412eb9dc1f.mp4"
+                 data-video="assets/style-samples/pixel-1f26cb412eb9dc1f.mp4" data-track="sample_pixel">
+                <span class="sample-frame sample-pixel" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/pixel.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-pixel-name" data-zh="复古像素" data-en="Retro pixels">复古像素</span>
+              </a>
+            </li>
+            <li>
+              <a class="sample-card" aria-labelledby="sample-cinema-name" href="https://github.com/makesynt/seqvio-studio/releases/download/style-samples-v1/cinematic-light-38aa59501dc45dd9.mp4"
+                 data-video="assets/style-samples/cinematic-light-38aa59501dc45dd9.mp4" data-track="sample_cinema">
+                <span class="sample-frame sample-cinema" aria-hidden="true">
+                  <img class="sample-poster" src="assets/style-covers/cinematic-light.webp" width="960" height="540" alt="" loading="lazy" decoding="async">
+                  <video class="sample-preview" muted loop playsinline preload="none" aria-hidden="true"></video>
+                  <span class="sample-play"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M5 2.6v10.8L13 8z"/></svg></span>
+                </span>
+                <span class="sample-name" id="sample-cinema-name" data-zh="动画电影" data-en="Animated cinema">动画电影</span>
+              </a>
+            </li>
+        </ul>
+        <div class="gallery-credits">
+          <a href="https://github.com/makesynt/seqvio-studio/blob/main/docs/SHOWCASE-CREDITS.md" data-track="sample_credits" data-zh="样片署名" data-en="Credits">样片署名</a>
         </div>
+        <dialog class="style-dialog" aria-labelledby="dialog-title">
+          <div class="dialog-head"><h3 id="dialog-title" data-zh="完整样片" data-en="Full sample">完整样片</h3><button class="dialog-close" type="button" aria-label="关闭 / Close">×</button></div>
+          <video class="dialog-video" controls playsinline preload="none"></video>
+          <p class="video-error" hidden data-zh="视频无法播放，可通过下方链接观看。" data-en="Video unavailable. Use the link below to watch.">视频无法播放，可通过下方链接观看。</p>
+          <div class="dialog-links"><a class="dialog-original" href="https://github.com/makesynt/seqvio-studio/releases/tag/style-samples-v1" target="_blank" rel="noopener noreferrer" data-zh="在 GitHub 上观看 ↗" data-en="Watch on GitHub ↗">在 GitHub 上观看 ↗</a><a href="https://github.com/makesynt/seqvio-studio/blob/main/docs/SHOWCASE-CREDITS.md" data-zh="样片署名 ↗" data-en="Sample credits ↗">样片署名 ↗</a></div>
+        </dialog>
       </section>
 
-      <section
-        class="section timing"
-        id="timing"
-        aria-labelledby="timing-title"
-      >
-        <div class="section-inner timing-layout">
-          <div class="section-heading">
-            <p class="eyebrow">Joint explanation timing</p>
-            <h2 id="timing-title">The voice sets the clock</h2>
-            <p>
-              Seqvio resolves synthesized speech first, then maps each visual
-              action to the phrase it explains. Authored and captured order
-              stays intact without hand-tuned padding.
-            </p>
-            <div class="timing-notes" aria-label="Timing benefits">
-              <span
-                ><b>Exact anchors</b> Spoken phrases, not guessed
-                timestamps</span
-              >
-              <span
-                ><b>Semantic order</b> Visual steps keep their intended
-                sequence</span
-              >
-              <span
-                ><b>One contract</b> Narration, targets, actions, and
-                evidence</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="timing-board"
-            aria-label="Phrase anchored timing visualization"
-          >
-            <div class="time-ruler" aria-hidden="true">
-              <span>0.0s</span><span>1.8s</span><span>3.7s</span
-              ><span>5.6s</span>
-            </div>
-            <div class="timeline-row speech-row">
-              <div class="row-label">
-                <strong>Measured speech</strong><span>resolved after TTS</span>
-              </div>
-              <div class="speech-segments">
-                <div style="--segment: 0">
-                  <span>capture the run</span><b>1.42s</b>
-                  <i class="waveform" aria-hidden="true"></i>
-                </div>
-                <div style="--segment: 1">
-                  <span>review the story</span><b>1.58s</b>
-                  <i class="waveform" aria-hidden="true"></i>
-                </div>
-                <div style="--segment: 2">
-                  <span>show the evidence</span><b>1.36s</b>
-                  <i class="waveform" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-            <div class="timing-links" aria-hidden="true">
-              <i></i><i></i><i></i>
-            </div>
-            <div class="timeline-row visual-row">
-              <div class="row-label">
-                <strong>Visual sequence</strong><span>same semantic order</span>
-              </div>
-              <div class="visual-segments">
-                <div>
-                  <b>01</b><span>Terminal evidence</span><small>source</small>
-                </div>
-                <div>
-                  <b>02</b><span>Story structure</span><small>action</small>
-                </div>
-                <div>
-                  <b>03</b><span>Evidence focus</span><small>target</small>
-                </div>
-              </div>
-            </div>
-            <i class="timing-playhead" aria-hidden="true"></i>
-          </div>
+      <section class="closing" id="download" aria-labelledby="closing-title">
+        <div>
+          <h2 id="closing-title" data-zh="下一幕，由你创作。" data-en="Make the next scene.">下一幕，由你创作。</h2>
         </div>
-      </section>
-
-      <section class="section demo" id="demo" aria-labelledby="demo-title">
-        <div class="section-inner">
-          <div class="section-heading split-heading demo-heading">
-            <div>
-              <p class="eyebrow">Product Hunt demo · 72 seconds</p>
-              <h2 id="demo-title">See the complete system in motion</h2>
-            </div>
-            <p>
-              Follow one real skill evaluation from an agent session to browser
-              evidence, story review, phrase-level timing, QA, and reusable
-              explanation formats.
-            </p>
-          </div>
-          <div class="demo-frame">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/VX6tKv2mwwk?rel=0&amp;modestbranding=1"
-              title="Seqvio product demo"
-              loading="lazy"
-              allow="fullscreen; picture-in-picture"
-              allowfullscreen
-              data-track="demo_video"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="section applications"
-        id="applications"
-        aria-labelledby="applications-title"
-      >
-        <div class="section-inner">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">One system, many explanations</p>
-              <h2 id="applications-title">
-                Use the visual form the claim needs
-              </h2>
-            </div>
-            <p>
-              The workflow stays consistent while the evidence and visual
-              structure change for each explanation job.
-            </p>
-          </div>
-
-          <div class="application-grid">
-            <article>
-              <div class="application-visual diff-visual" aria-hidden="true">
-                <span class="diff-file">before</span
-                ><span class="diff-file">after</span> <i class="removed"></i
-                ><i class="added"></i><i class="added short"></i>
-              </div>
-              <div class="application-copy">
-                <span>01</span>
-                <h3>PR video review</h3>
-              </div>
-              <p>
-                Turn a change, its evidence, and the review conclusion into a
-                concise walkthrough.
-              </p>
-            </article>
-
-            <article>
-              <div class="application-visual matrix-visual" aria-hidden="true">
-                <span>Fit</span><i style="--score: 86%"></i
-                ><i style="--score: 68%"></i> <span>Speed</span
-                ><i style="--score: 72%"></i><i style="--score: 91%"></i>
-                <span>Control</span><i style="--score: 94%"></i
-                ><i style="--score: 61%"></i>
-              </div>
-              <div class="application-copy">
-                <span>02</span>
-                <h3>Tool comparison</h3>
-              </div>
-              <p>
-                Compare products across the criteria that matter, then make the
-                trade-off visible.
-              </p>
-            </article>
-
-            <article>
-              <div class="application-visual steps-visual" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><b></b>
-              </div>
-              <div class="application-copy">
-                <span>03</span>
-                <h3>Tutorial verification</h3>
-              </div>
-              <p>
-                Walk through each instruction and show whether the observed
-                result matches the claim.
-              </p>
-            </article>
-
-            <article>
-              <div class="application-visual graph-visual" aria-hidden="true">
-                <span>Input</span><span>Context</span><b>Mechanism</b
-                ><span>Effect A</span><span>Effect B</span><i>Why</i>
-              </div>
-              <div class="application-copy">
-                <span>04</span>
-                <h3>Concept explanation</h3>
-              </div>
-              <p>
-                Build a mechanism map that connects inputs, context, effects,
-                and the reason they follow.
-              </p>
-            </article>
-
-            <article>
-              <div class="application-visual product-visual" aria-hidden="true">
-                <div><i></i><i></i><i></i></div>
-                <span><b>82</b> clarity</span><span><b>91</b> proof</span
-                ><span><b>76</b> fit</span>
-              </div>
-              <div class="application-copy">
-                <span>05</span>
-                <h3>Product review</h3>
-              </div>
-              <p>
-                Pair visible product states with annotated findings, measured
-                scores, and a verdict.
-              </p>
-            </article>
-
-            <article>
-              <div class="application-visual skill-visual" aria-hidden="true">
-                <div class="skill-browser"><i></i><b></b><b></b><b></b></div>
-                <div class="skill-results">
-                  <span>desktop ✓</span><span>mobile ✓</span
-                  ><span>build ✓</span>
-                </div>
-              </div>
-              <div class="application-copy">
-                <span>06</span>
-                <h3>Skill evaluation</h3>
-              </div>
-              <p>
-                Connect the agent session, generated artifact, browser states,
-                and evaluation evidence.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contract" aria-labelledby="contract-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Explainer-native by design</p>
-            <h2 id="contract-title">
-              A production contract agents can inspect
-            </h2>
-          </div>
-          <div class="contract-list">
-            <div>
-              <span>01</span><strong>ExplainerDocument</strong>
-              <p>
-                A structured source for captured and agent-authored explanations
-                that compiles to editable TSX.
-              </p>
-            </div>
-            <div>
-              <span>02</span><strong>Scene vocabulary</strong>
-              <p>
-                Whiteboards, diagrams, product walkthroughs, terminal sessions,
-                browser evidence, and annotations.
-              </p>
-            </div>
-            <div>
-              <span>03</span><strong>ExplanationBeat</strong>
-              <p>
-                One place for spoken phrases, visual actions, attention targets,
-                media, and observed facts.
-              </p>
-            </div>
-            <div>
-              <span>04</span><strong>Verification loop</strong>
-              <p>
-                Deterministic frame and timing checks that produce diagnostics
-                an agent can act on.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="section install"
-        id="install"
-        aria-labelledby="install-title"
-      >
-        <div class="section-inner install-layout">
-          <div class="section-heading">
-            <p class="eyebrow">Open source · MIT</p>
-            <h2 id="install-title">Give your agent an explainer toolkit</h2>
-            <p>
-              Install the local renderer, add the Seqvio skill to your agent,
-              and keep every explanation reviewable in the same repository as
-              the work.
-            </p>
-          </div>
-          <div class="install-stack">
-            <div class="command">
-              <span>Renderer</span><code>npm install -g @seqvio/renderer</code>
-            </div>
-            <div class="command">
-              <span>Agent skill</span
-              ><code
-                >npx skills add makesynt/seqvio</code
-              >
-            </div>
-            <a
-              class="button primary dark-button"
-              href="https://github.com/makesynt/seqvio"
-              data-track="install_github"
-              >View Seqvio on GitHub</a
-            >
-          </div>
+        <div class="closing-action">
+          <a class="button button-dark" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="closing_download"><span data-zh="获取 Windows 版" data-en="Get it for Windows">获取 Windows 版</span><span aria-hidden="true">↗</span></a>
+          <p data-zh="Windows x64 · 需配置 Agent" data-en="Windows x64 · Agent setup required">Windows x64 · 需配置 Agent</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="#top" aria-label="Seqvio home">
-        <img src="assets/brand/seqvio-icon.svg" alt="" />
-        <span>Seqvio</span>
-      </a>
-      <p>Agent work, explained with Seqvio</p>
-      <div>
-        <a href="https://github.com/makesynt/seqvio" data-track="footer_github"
-          >GitHub</a
-        >
-        <a
-          href="https://www.npmjs.com/package/@seqvio/renderer"
-          data-track="footer_npm"
-          >npm</a
-        >
-        <span>MIT licensed</span>
+      <a class="brand footer-brand" href="#top" aria-label="Seqvio Studio home"><img src="assets/brand/seqvio-studio-mark.svg" alt=""><span>seqvio <span>studio</span></span></a>
+      <div class="footer-links">
+        <a href="https://github.com/makesynt/seqvio-studio" data-track="footer_github">GitHub ↗</a>
+        <a href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-zh-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-en-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.en.md" data-track="footer_docs" data-zh="使用指南 ↗" data-en="Guide ↗">使用指南 ↗</a>
+        <a href="seqvio-legacy.html" data-track="footer_legacy" data-zh="原 Seqvio ↗" data-en="Seqvio archive ↗">原 Seqvio ↗</a>
       </div>
     </footer>
-    <script
-      data-goatcounter="https://makeseq.goatcounter.com/count"
-      src="https://gc.zgo.at/count.js"
-      defer
-    ></script>
-    <script src="analytics.js" defer></script>
-  </body>
+  <script src="site.js" defer></script>
+  <script data-goatcounter="https://makeseq.goatcounter.com/count" src="https://gc.zgo.at/count.js" defer></script>
+  <script src="analytics.js" defer></script>
+</body>
 </html>
