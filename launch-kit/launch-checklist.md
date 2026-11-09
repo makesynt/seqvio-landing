@@ -37,4 +37,3 @@
 - Gallery 2: `assets/launch/gallery-02-prompt-to-explanation.png`
 - Gallery 3: `assets/launch/gallery-03-visual-languages.png`
 - Gallery 4: `assets/launch/gallery-04-real-workflow.png`
-- Video source: `assets/videos/seqvio-product-hunt-en-bgm.mp4`

@@ -54,8 +54,6 @@ Seqvio is an open-source framework for coding-agent explainers. Turn technical i
 GitHub: https://github.com/makesynt/seqvio
 npm: https://www.npmjs.com/package/@seqvio/renderer
 
-Video file for upload: `assets/videos/seqvio-product-hunt-en-bgm.mp4`
-
 ## Launch Posts
 
 **X / Bluesky**

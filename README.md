@@ -19,7 +19,7 @@ The language choice is stored locally when browser storage is available. Hover o
 - assets/studio-workbench.webp is a capture of the Studio element editor with a demo project.
 - assets/style-covers/ contains stills selected from the six original sample videos.
 - assets/style-samples/ contains six publicly released Studio samples. Their SHA-256 values were verified against the Studio release manifest; CREDITS.md retains the release's music attribution.
-- The previous Seqvio renderer landing page and stylesheet remain as seqvio-legacy.html and legacy-styles.css. Original Product Hunt assets and launch-kit files are retained.
+- The previous Seqvio renderer landing page and stylesheet remain as seqvio-legacy.html and legacy-styles.css. Original Product Hunt image assets and launch-kit files are retained.
 
 ### Hero artwork prompt
 
