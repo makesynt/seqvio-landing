@@ -32,7 +32,7 @@
       </nav>
       <div class="header-actions">
         <button class="language-toggle" type="button" aria-label="Switch to English" data-track="language_switch">EN</button>
-        <a class="header-download" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="nav_download"><span data-zh="下载" data-en="Download">下载</span><span aria-hidden="true">↗</span></a>
+        <a class="header-download" href="#download" data-track="nav_download"><span data-zh="下载" data-en="Download">下载</span><span aria-hidden="true">↓</span></a>
       </div>
     </header>
 
@@ -43,10 +43,10 @@
             <h1 id="hero-title"><span data-zh="想象，" data-en="Vision">想象，</span><span data-zh="即将上演。" data-en="Poised for its premiere.">即将上演。</span></h1>
             <p class="hero-subtitle" data-zh="为 AI 视频创作而生的本地工作台。" data-en="A local workspace for AI video creation.">为 AI 视频创作而生的本地工作台。</p>
             <div class="hero-actions">
-              <a class="button button-dark" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="hero_download"><span data-zh="获取 Windows 版" data-en="Get it for Windows">获取 Windows 版</span><span aria-hidden="true">↗</span></a>
+              <a class="button button-dark" href="#download" data-track="hero_download"><span data-zh="下载 Seqvio Studio" data-en="Download Seqvio Studio">下载 Seqvio Studio</span><span aria-hidden="true">↓</span></a>
               <a class="film-link" href="https://youtu.be/PKEJ8uIZQto" target="_blank" rel="noopener noreferrer" data-track="hero_film"><span class="film-play" aria-hidden="true">▶</span><span data-zh="观看介绍" data-en="Watch the film">观看介绍</span></a>
             </div>
-            <p class="hero-note" data-zh="Windows x64 · 需配置 Agent" data-en="Windows x64 · Agent setup required">Windows x64 · 需配置 Agent</p>
+            <p class="hero-note" data-zh="支持 Windows 和 macOS" data-en="Available for Windows and macOS">支持 Windows 和 macOS</p>
           </div>
           <div class="hero-art">
             <img class="hero-workbench" src="assets/studio-workbench.webp" width="1440" height="900"
@@ -142,13 +142,24 @@
       </section>
 
       <section class="closing" id="download" aria-labelledby="closing-title">
-        <div>
-          <h2 id="closing-title" data-zh="下一幕，由你创作。" data-en="Make the next scene.">下一幕，由你创作。</h2>
+        <div class="closing-heading">
+          <h2 id="closing-title" data-zh="下载 Seqvio Studio" data-en="Download Seqvio Studio">下载 Seqvio Studio</h2>
+          <a class="subtle-link" href="https://github.com/makesynt/seqvio-studio/releases/tag/v0.1.4" data-track="download_release"><span data-zh="v0.1.4 发行说明" data-en="v0.1.4 release notes">v0.1.4 发行说明</span><span aria-hidden="true">↗</span></a>
         </div>
-        <div class="closing-action">
-          <a class="button button-dark" href="https://github.com/makesynt/seqvio-studio/releases/latest" data-track="closing_download"><span data-zh="获取 Windows 版" data-en="Get it for Windows">获取 Windows 版</span><span aria-hidden="true">↗</span></a>
-          <p data-zh="Windows x64 · 需配置 Agent" data-en="Windows x64 · Agent setup required">Windows x64 · 需配置 Agent</p>
-        </div>
+        <ul class="download-options">
+          <li><a class="download-option" href="https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-win-x64-Setup.exe" data-track="download_windows_x64">
+            <span><strong>Windows</strong><small>x64 · EXE</small></span><span class="download-arrow" aria-hidden="true">↓</span>
+          </a></li>
+          <li><a class="download-option" href="https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-mac-arm64.dmg" data-track="download_mac_arm64">
+            <span><strong>macOS</strong><small>Apple Silicon · DMG</small></span><span class="download-arrow" aria-hidden="true">↓</span>
+          </a></li>
+          <li><a class="download-option" href="https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-mac-x64.dmg" data-track="download_mac_x64">
+            <span><strong>macOS</strong><small>Intel · DMG</small></span><span class="download-arrow" aria-hidden="true">↓</span>
+          </a></li>
+        </ul>
+        <p class="download-help"><span data-zh="开始创作前需配置 Agent。" data-en="Set up an agent before creating.">开始创作前需配置 Agent。</span>
+          <a href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-zh-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.zh-CN.md" data-en-href="https://github.com/makesynt/seqvio-studio/blob/main/docs/USAGE.en.md" data-track="download_guide" data-zh="查看使用指南 ↗" data-en="Read the setup guide ↗">查看使用指南 ↗</a>
+        </p>
       </section>
     </main>
 

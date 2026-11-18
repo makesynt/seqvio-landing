@@ -11,9 +11,11 @@ const site = read("site.js");
 const analytics = read("analytics.js");
 
 for (const content of [
-  "Seqvio Studio", "想象，", "即将上演。", "Windows x64",
+  "Seqvio Studio", "想象，", "即将上演。", "Windows", "Apple Silicon", "Intel",
   'data-en="Vision"', 'data-en="Poised for its premiere."',
-  "https://github.com/makesynt/seqvio-studio/releases/latest",
+  "https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-win-x64-Setup.exe",
+  "https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-mac-arm64.dmg",
+  "https://github.com/makesynt/seqvio-studio/releases/download/v0.1.4/Seqvio-Studio-0.1.4-mac-x64.dmg",
   "https://youtu.be/PKEJ8uIZQto",
   "docs/USAGE.zh-CN.md", "docs/USAGE.en.md",
   "docs/SHOWCASE-CREDITS.md", "seqvio-legacy.html",

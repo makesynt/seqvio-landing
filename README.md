@@ -1,6 +1,6 @@
 # Seqvio Studio landing page
 
-A static, bilingual landing page for Seqvio Studio. It contains the product introduction, six selected style samples, and links to the film, guide and Windows releases. No build step is required.
+A static, bilingual landing page for Seqvio Studio. It contains the product introduction, six selected style samples, and links to the film, guide and Windows/macOS installers. No build step is required.
 
 ## Preview and test
 
